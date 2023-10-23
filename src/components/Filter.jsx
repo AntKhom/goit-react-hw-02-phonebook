@@ -1,6 +1,5 @@
 const Filter = ({filter}) => {
-    return <label htmlFor="">
-                <input
+    return      <input
                     onChange={filter}
                     type="text"
                     name="filter"
@@ -8,7 +7,6 @@ const Filter = ({filter}) => {
                     title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
                     placeholder="Find by name"
                 />
-            </label>
 }
 
 export default Filter;

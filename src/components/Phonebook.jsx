@@ -6,6 +6,7 @@ import Filter from "./Filter";
 import Contact from "./Contact";
 import ContactList from "./ContactList"
 
+
 export default class Phonebook extends Component {
     state = {
         contacts: [
@@ -59,7 +60,8 @@ export default class Phonebook extends Component {
         );
     }
 
-    deleteContact = (id) => {
+    deleteContact = (e) => {   
+        const id = e.target.parentNode.parentNode.id;
         this.setState(prevState => ({
             contacts: prevState.contacts.filter(contact => contact.id!== id)
         }));
@@ -82,7 +84,7 @@ export default class Phonebook extends Component {
                             key={contact.id}
                             name={contact.name}
                             number={contact.number}
-                            deleteContact={this.deleteContact}
+                            del={this.deleteContact}
                         />
                     ))}
                 </ContactList>   

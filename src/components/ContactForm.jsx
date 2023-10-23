@@ -1,6 +1,7 @@
+import css from "./contactForm.module.css"
+
 const ContactForm = ({ change, submit }) => {
-    return <form onSubmit={submit}>
-        <label htmlFor="">
+    return <form className={css.formInput } onSubmit={submit}>
             <input
                 onChange={change}
                 type="text"
@@ -10,9 +11,7 @@ const ContactForm = ({ change, submit }) => {
                 placeholder="Name"
                 required
             />
-        </label>
         <br />
-        <label htmlFor="">
             <input
                 onChange={change}
                 type="tel"
@@ -22,7 +21,6 @@ const ContactForm = ({ change, submit }) => {
                 placeholder="Phone number"
                 required
             />
-        </label>
         <br />
         <button type="submit">Add contact</button>
     </form>

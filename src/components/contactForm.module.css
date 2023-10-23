@@ -1,0 +1,8 @@
+.formInput input {
+    padding: 10px 5px 0px 10px;
+    margin-bottom: 8px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 200, 255);
+    outline: none;
+
+}
