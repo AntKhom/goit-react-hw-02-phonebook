@@ -1,8 +1,9 @@
 import css from "./contactForm.module.css"
 
-const ContactForm = ({ change, submit }) => {
+const ContactForm = ({name, number, change, submit }) => {
     return <form className={css.formInput } onSubmit={submit}>
-            <input
+        <input
+                value ={name}
                 onChange={change}
                 type="text"
                 name="name"
@@ -12,7 +13,8 @@ const ContactForm = ({ change, submit }) => {
                 required
             />
         <br />
-            <input
+        <input
+                value={number}
                 onChange={change}
                 type="tel"
                 name="number"

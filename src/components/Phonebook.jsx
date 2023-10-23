@@ -29,12 +29,11 @@ export default class Phonebook extends Component {
     }
 
     handleSubmit = (e) => {
+        e.preventDefault();
         if (this.isExistingContact(e.target.name.value)) {
             alert(`${this.state.name} is already in contacts.`);
         return
         };
-
-        e.preventDefault();
         const contact = {
             id: nanoid(),
             name: this.state.name,
@@ -73,6 +72,8 @@ export default class Phonebook extends Component {
             <div>
                 <h2>Phonebook</h2>
                 <ContactForm
+                    name={this.state.name}
+                    number={this.state.number}
                     change={this.handleChange}
                     submit={this.handleSubmit}
                 />
