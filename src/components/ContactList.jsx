@@ -1,6 +1,8 @@
 const ContactList = ({children}) => {
     return <table>
-        {children}
+        <tbody>
+            {children}
+        </tbody>
     </table>
 }
 export default ContactList;

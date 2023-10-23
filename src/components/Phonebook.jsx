@@ -61,9 +61,10 @@ export default class Phonebook extends Component {
     }
 
     deleteContact = (e) => {   
-        const id = e.target.parentNode.parentNode.id;
+        console.log(e.target.parentNode.parentNode.firstElementChild.innerText);
+        const name = e.target.parentNode.parentNode.firstElementChild.innerText;
         this.setState(prevState => ({
-            contacts: prevState.contacts.filter(contact => contact.id!== id)
+            contacts: prevState.contacts.filter(contact => contact.name!== name)
         }));
     }
 
