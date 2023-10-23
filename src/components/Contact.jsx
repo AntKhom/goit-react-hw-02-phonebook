@@ -8,4 +8,4 @@ const Contact = ({ id, name, number, del }) => {
            </tr>
 }
 
-export default Contact;
+export default Contact; 
